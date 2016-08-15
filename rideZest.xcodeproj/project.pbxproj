@@ -39,6 +39,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C403FD51D6252D700AA0FF6 /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				1CC6ED791D623CC500CB7D3B /* AppDelegate.swift */,
+				1CC6ED851D623CC500CB7D3B /* Info.plist */,
+			);
+			name = Miscellaneous;
+			sourceTree = "<group>";
+		};
+		1C403FD61D6252EE00AA0FF6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1C403FCF1D624E9600AA0FF6 /* ProductTableViewController.swift */,
+				1C403FD11D624FDC00AA0FF6 /* ProductTableViewCell.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1C403FD71D62530900AA0FF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1CC6ED821D623CC500CB7D3B /* LaunchScreen.storyboard */,
+				1CC6ED7D1D623CC500CB7D3B /* Main.storyboard */,
+				1CC6ED801D623CC500CB7D3B /* Assets.xcassets */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1C403FD81D62532500AA0FF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C403FD31D62520A00AA0FF6 /* Server.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		1CC6ED6D1D623CC500CB7D3B = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +94,10 @@
 		1CC6ED781D623CC500CB7D3B /* rideZest */ = {
 			isa = PBXGroup;
 			children = (
-				1CC6ED791D623CC500CB7D3B /* AppDelegate.swift */,
-				1CC6ED7D1D623CC500CB7D3B /* Main.storyboard */,
-				1CC6ED801D623CC500CB7D3B /* Assets.xcassets */,
-				1CC6ED821D623CC500CB7D3B /* LaunchScreen.storyboard */,
-				1CC6ED851D623CC500CB7D3B /* Info.plist */,
-				1C403FCF1D624E9600AA0FF6 /* ProductTableViewController.swift */,
-				1C403FD11D624FDC00AA0FF6 /* ProductTableViewCell.swift */,
-				1C403FD31D62520A00AA0FF6 /* Server.swift */,
+				1C403FD81D62532500AA0FF6 /* Model */,
+				1C403FD71D62530900AA0FF6 /* View */,
+				1C403FD61D6252EE00AA0FF6 /* Controller */,
+				1C403FD51D6252D700AA0FF6 /* Miscellaneous */,
 			);
 			path = rideZest;
 			sourceTree = "<group>";
