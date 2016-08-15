@@ -131,7 +131,7 @@
         <!--Products-->
         <scene sceneID="Hpr-et-hnt">
             <objects>
-                <tableViewController id="mOc-MI-r4c" sceneMemberID="viewController">
+                <tableViewController id="mOc-MI-r4c" customClass="ProductTableViewController" customModule="rideZest" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="BLl-RU-6SN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
