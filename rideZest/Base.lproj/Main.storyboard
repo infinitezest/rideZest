@@ -67,6 +67,35 @@
             </objects>
             <point key="canvasLocation" x="386" y="1843"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="wxa-dm-695">
+            <objects>
+                <viewController id="fXa-Dg-taP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uSj-2s-aih"/>
+                        <viewControllerLayoutGuide type="bottom" id="eAC-pR-hiX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="byH-fA-qFM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qit-xN-QGu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qit-xN-QGu" firstAttribute="leading" secondItem="byH-fA-qFM" secondAttribute="leading" id="3qw-Dr-Vpm"/>
+                            <constraint firstItem="Qit-xN-QGu" firstAttribute="top" secondItem="byH-fA-qFM" secondAttribute="top" id="QTA-wg-nwt"/>
+                            <constraint firstAttribute="bottom" secondItem="Qit-xN-QGu" secondAttribute="bottom" id="qEI-Xv-PeC"/>
+                            <constraint firstAttribute="trailing" secondItem="Qit-xN-QGu" secondAttribute="trailing" id="xtn-yp-9GO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HUl-Ez-Oii" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="1843"/>
+        </scene>
         <!--Rides-->
         <scene sceneID="XPz-fH-hrs">
             <objects>
@@ -83,6 +112,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="fXa-Dg-taP" kind="show" id="FgO-PW-xm2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -163,11 +195,11 @@
             </objects>
             <point key="canvasLocation" x="1058" y="370"/>
         </scene>
-        <!--Rides-->
+        <!--Products-->
         <scene sceneID="ybO-qo-kd2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ukl-ed-LBy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Rides" id="L0Z-BP-X3P"/>
+                    <tabBarItem key="tabBarItem" title="Products" id="L0Z-BP-X3P"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mIl-bS-9Rx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
