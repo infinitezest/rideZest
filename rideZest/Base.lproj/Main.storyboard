@@ -137,7 +137,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="120" id="1HP-Ra-j9e">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="120" id="1HP-Ra-j9e" customClass="ProductTableViewCell" customModule="rideZest" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1HP-Ra-j9e" id="mr1-C5-2Mn">
@@ -161,6 +161,11 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="displayName" destination="YY7-f9-GqH" id="Z6o-5K-wf1"/>
+                                    <outlet property="productDescription" destination="NV0-LA-4MJ" id="kLW-D8-wIe"/>
+                                    <outlet property="productImage" destination="puG-x4-gQW" id="Moa-wi-oH7"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
