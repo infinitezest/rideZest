@@ -8,6 +8,42 @@
 
 import Foundation
 
+/// Base URL string for OAuth 2.0 access
+let baseOAuthURLString = "https://login.uber.com/oauth/v2"
+/// Base URL for the Uber API
+let baseAPIURLString = "https://api.uber.com"
+
+/**
+ Provides the full path of URL string for various OAuth and API calls.
+ */
+enum EndPoint {
+    /// Endpoints for OAuth 2.0
+    case authorize, token
+    /// Endpoints for fetching information for various items.
+    case profile, rides, products
+    
+    /**
+     Provides the full access path for a given end point.
+     */
+    func path() -> String {
+        switch(self) {
+        case .authorize:
+            return baseOAuthURLString+"/authorize"
+        case .token:
+            return baseOAuthURLString + "/token"
+        case .profile:
+            return baseAPIURLString + "/v1/me"
+        case .rides:
+            return baseAPIURLString + "/v1.2/history"
+        case .products:
+            return baseAPIURLString + "/v1/products"
+        }
+    }
+}
+
+/**
+ Important strings for accessing server are available from the singleton.
+ */
 class ServerStrings {
     
     /// Singleton for accessing the important strings for accessing the server.
