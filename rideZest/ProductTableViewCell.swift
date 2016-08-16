@@ -13,19 +13,27 @@ class ProductTableViewCell: UITableViewCell {
     // ---------------------------------------------------------------------------------------------
     // MARK: Outlets
     
-    @IBOutlet weak var productImage: UIImageView!
+    /// Name of the product
     @IBOutlet weak var displayName: UILabel!
+    /// Description of the product
     @IBOutlet weak var productDescription: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+
+    /// Image of the product.
+    /// Only downloaded the first time it is accessed.
+    @IBOutlet weak var productImage: UIImageView!
+
+    /**
+     Updates the controls in the cell. If the image is nil, the download from the server
+     will be kicked off.
+    */
+    func updateControlsWithProduct(product: Product) {
+        displayName.text = product.displayName
+        productDescription.text = product.description
+        
+        if product.image == nil {
+            // Fetch Image
+        } else {
+            productImage.image = product.image
+        }
     }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }
