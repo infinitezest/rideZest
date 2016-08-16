@@ -15,10 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
-        Server.shared.fetchProducts { (productDictionary) in
-            print(productDictionary)
-        }
+        
         return true
     }
 

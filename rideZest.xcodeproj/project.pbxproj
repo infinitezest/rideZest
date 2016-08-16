@@ -11,6 +11,7 @@
 		1C403FD21D624FDC00AA0FF6 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C403FD11D624FDC00AA0FF6 /* ProductTableViewCell.swift */; };
 		1C403FD41D62520A00AA0FF6 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C403FD31D62520A00AA0FF6 /* Server.swift */; };
 		1C403FDA1D62560700AA0FF6 /* ServerStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C403FD91D62560700AA0FF6 /* ServerStrings.swift */; };
+		1C403FDC1D629CA700AA0FF6 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C403FDB1D629CA700AA0FF6 /* Products.swift */; };
 		1CC6ED7A1D623CC500CB7D3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC6ED791D623CC500CB7D3B /* AppDelegate.swift */; };
 		1CC6ED7F1D623CC500CB7D3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CC6ED7D1D623CC500CB7D3B /* Main.storyboard */; };
 		1CC6ED811D623CC500CB7D3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CC6ED801D623CC500CB7D3B /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		1C403FD11D624FDC00AA0FF6 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		1C403FD31D62520A00AA0FF6 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		1C403FD91D62560700AA0FF6 /* ServerStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerStrings.swift; sourceTree = "<group>"; };
+		1C403FDB1D629CA700AA0FF6 /* Products.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
 		1CC6ED761D623CC500CB7D3B /* rideZest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rideZest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CC6ED791D623CC500CB7D3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CC6ED7E1D623CC500CB7D3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			children = (
 				1C403FD31D62520A00AA0FF6 /* Server.swift */,
 				1C403FD91D62560700AA0FF6 /* ServerStrings.swift */,
+				1C403FDB1D629CA700AA0FF6 /* Products.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				1C403FDA1D62560700AA0FF6 /* ServerStrings.swift in Sources */,
 				1C403FD01D624E9600AA0FF6 /* ProductTableViewController.swift in Sources */,
 				1CC6ED7A1D623CC500CB7D3B /* AppDelegate.swift in Sources */,
+				1C403FDC1D629CA700AA0FF6 /* Products.swift in Sources */,
 				1C403FD41D62520A00AA0FF6 /* Server.swift in Sources */,
 				1C403FD21D624FDC00AA0FF6 /* ProductTableViewCell.swift in Sources */,
 			);

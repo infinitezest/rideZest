@@ -31,7 +31,7 @@ class Server {
      method as a dictionary. The calling method will have to further process the objects in this
      dictionary into specific objects (like products, profile, etc.)
      */
-    func fetchJSON(request: NSURLRequest, completionHandler: (jsonDictionary: [String: AnyObject]?)->Void) {
+    func fetchJSON(request: NSURLRequest, completionHandler: (jsonArray: [String: AnyObject]?)->Void) {
         
         let dataTask = session.dataTaskWithRequest(request) {(data, response, error) in
             
@@ -46,9 +46,8 @@ class Server {
             }
             
             do {
-                let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableContainers) as? [String: AnyObject]
-                print(jsonDictionary)
-                completionHandler(jsonDictionary: jsonDictionary)
+                let jsonArray = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableContainers) as? [String: AnyObject]
+                completionHandler(jsonArray: jsonArray)
             } catch(let error) {
                 print("Problem converting to array \(error)")
                 return
@@ -98,7 +97,6 @@ class Server {
         urlComponents.queryItems = prepareQueryItems((name: "latitude", value: String(coordinate.latitude)),
                                                      (name: "longitude", value: String(coordinate.longitude)))
         
-        print(urlComponents.URL!)
         let request = NSMutableURLRequest(URL: urlComponents.URL!)
         request.setValue("Token " + ServerStrings.shared.serverToken, forHTTPHeaderField: "Authorization")
         return request
@@ -106,17 +104,18 @@ class Server {
     
     /**
      Fetches the products by calling the common fetchJSON method. Plucks the products dictionary
-     from the JSON dictionary and returns the products dictionary.
+     from the JSON array and returns the products array.
      */
-    func fetchProducts(completionHandler: (productDictionary: [String: AnyObject]?)->Void) {
+    func fetchProducts(completionHandler: (productArray: [AnyObject]?)->Void) {
         fetchJSON(productRequest) {(jsonDictionary) in
             guard let jsonDictionary = jsonDictionary else {
-                print("Empty JSON Dictionary")
+                print("Empty JSON Array")
                 return
             }
             
-            let productDictionary = jsonDictionary["products"] as? [String: AnyObject]
-            completionHandler(productDictionary: productDictionary)
+            let productArrayData = jsonDictionary["products"]
+            let productArray = productArrayData as? [AnyObject]
+            completionHandler(productArray: productArray)
         }
     }
 }
