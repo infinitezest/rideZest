@@ -25,7 +25,7 @@ enum EndPoint {
     /**
      Provides the full access path for a given end point.
      */
-    func path() -> String {
+    var path: String {
         switch(self) {
         case .authorize:
             return baseOAuthURLString+"/authorize"
